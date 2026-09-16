@@ -1,7 +1,7 @@
-# Name: 
-# KUID: 
-# LAB Session (Day/Time): 
-# LAB Assignment: 
+# Name: Zoey Spies
+# KUID: 3136594
+# LAB Session (Day/Time): Monday 11AM
+# LAB Assignment: Lab 3
 # Description:
 #
 #
@@ -18,7 +18,6 @@
 # |(0,0) (0,1) (0,2)|
 # |(1,0) (1,1) (1,2)|
 # |(2,0) (2,1) (2,2)|
-import numpy as np
 
 def get_matrix(ints=False):
     """ 
@@ -55,10 +54,18 @@ def print_matrix(m):
             print(item, end=" ")
         print()
 
+# multiply matrix without using numpy
+def multiply_matrix(m, n):
+    for row in m:
+        for item in row:
+            pass
+
+
 # Example
 def main():
     m = get_matrix(False)
     print("Got: ")
     print_matrix(m)
+    multiply_matrix(m)
 
 main()
