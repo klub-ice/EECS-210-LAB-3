@@ -71,15 +71,15 @@ def multiply_matrix(m,n):
 
 # Example
 def main():
-    m = get_matrix(True) # get first matrix from user
+    matrix1 = get_matrix(True) # get first matrix from user
     print("Got:") # print first matrix
-    print_matrix(m)
+    print_matrix(matrix1)
 
-    n = get_matrix(True) # get second matrix from user
+    matrix2 = get_matrix(True) # get second matrix from user
     print("Got:") # print second matrix
-    print_matrix(n)
+    print_matrix(matrix2)
 
-    result = multiply_matrix(m, n) # multiply the two matrices
+    result = multiply_matrix(matrix1, matrix2) # multiply the two matrices
     print("Result:") # print result of multiplication
     print_matrix(result)
 main()
