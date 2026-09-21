@@ -55,17 +55,31 @@ def print_matrix(m):
         print()
 
 # multiply matrix without using numpy
-def multiply_matrix(m, n):
-    for row in m:
-        for item in row:
-            pass
-
+def multiply_matrix(m,n):
+    result = [] # initialize result matrix
+    for i in range(len(m)): # iterate through rows of m
+        row = [] # initialize row of result matrix
+        for j in range(len(n[0])): # iterate through columns of n
+            value = 0 # initialize value of result matrix
+            for k in range(len(n)): # iterate through rows of n
+                if m[i][k] == 1 and n[k][j] == 1: # if both values are 1, set value to 1
+                    value = 1
+                    break
+            row.append(value) # append value to row of result matrix
+        result.append(row) # append row to result matrix
+    return result # return result matrix
 
 # Example
 def main():
-    m = get_matrix(False)
-    print("Got: ")
+    m = get_matrix(True) # get first matrix from user
+    print("Got:") # print first matrix
     print_matrix(m)
-    multiply_matrix(m)
 
+    n = get_matrix(True) # get second matrix from user
+    print("Got:") # print second matrix
+    print_matrix(n)
+
+    result = multiply_matrix(m, n) # multiply the two matrices
+    print("Result:") # print result of multiplication
+    print_matrix(result)
 main()
